@@ -3,7 +3,7 @@ Author: Leon Helbig, Karsten Kaschte, Justin Kühl
 Date: 20.05.2021
 Version: 1.0
 **********************************************************/
-const cors = require('cors');
+const cors = require('cors')
 const express = require('express')
 const path = require('path')
 const { exec } = require('child_process')

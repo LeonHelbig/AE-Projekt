@@ -263,3 +263,7 @@ body {
     color: white;
     text-decoration: blink;
 }
+
+.rankedborder .invis {
+    visibility: hidden;
+}

@@ -54,7 +54,7 @@ Version: 1.0
             </div>
             <div class="mainstat">
                 <img class="playericon" src="http://ddragon.leagueoflegends.com/cdn/11.8.1/img/profileicon/<?php echo $profileIconId ?>.png" href="#">
-                <img class="rankedborder" src="https://opgg-static.akamaized.net/images/borders2/<?php echo strtolower($tier) ?>.png" href="#">
+                <img class="rankedborder" <?php if($ranking == "unranked"){ echo "style='visibility:hidden;'"; }; ?> src="https://opgg-static.akamaized.net/images/borders2/<?php echo strtolower($tier) ?>.png" href="#">
                 <div class="playerlevel">
                     <?php
                         echo "Level: " . $summonerLevel; 
@@ -71,7 +71,14 @@ Version: 1.0
                     ?></b>
                 </div>
                 <div class="summonerrank">
-                    <?php echo "Rank: " . strtolower($tier) . '&nbsp;'; echo $ranking;?>
+                    <?php 
+                        if($ranking == "unranked"){
+                            echo "Unranked";    
+                        }else{
+                            echo "Rank: " . ucwords(strtolower($tier)) . '&nbsp;'; echo $ranking;
+                        }
+                    ?>
+                        
                 </div>
             </div>
             <div class="spacer"> <!-- Platzhalter für eine Spalte des Flexgrids -->
