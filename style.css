@@ -1,0 +1,265 @@
+/*********************************************************
+Author: Leon Helbig, Karsten Kaschte, Justin Kühl
+Date: 20.05.2021
+Version: 1.0
+**********************************************************/
+body {
+    background-color:#5384E8 ;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    font-size: 30px; /* Bei H1 wird die Schriftgröße mit 2 multipliziert */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Bei H2 wird die Schriftgröße mit 1.5 multipliziert */
+}
+
+.memberlist {
+    font-size: 24px;
+}
+
+@media (max-width:849px){
+    .header {
+        font-size:15px;
+    }
+
+    .summonerinput {
+        width: 280px;
+    }
+
+    .rankedborder {
+        left: -15px;
+    }
+
+    .summonerrank {
+        position: relative;
+        left: 115px;
+    }
+
+    .summonername {
+        position: relative;
+        left: 130px;
+    }
+
+    .summonername .name {
+        font-size: 24px; 
+    }
+
+    .playerlevel {
+        position: relative;
+        top: -160px;
+        left: 55px;
+    }
+
+    .button{
+        left: calc(50% - 40px) !important;
+    }
+
+    .logo {
+        width: 320px;
+        height: 202px;
+        margin-top: -32px;
+    }
+
+    .stats {
+        margin-top: 128px;
+    }
+}
+@media (min-width:850px){
+    .summonerinput {
+        width: 570px;
+    }
+
+    .summonername {
+        font-size: 24px !important;
+    }
+}
+
+.inputfield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.summonerinput {
+    border-radius: 10px;
+    height: 42px;
+    border-color: #2566e9;
+}
+
+.summonerinput :focus-visible {
+    border: none;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+  
+.topnav a:hover {
+    background-color: #5384E8;
+    color: black;
+}
+  
+.topnav a.active {
+    background-color: #1f2fbb;
+    color: white;
+}
+
+.playerinformation {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-gap: 24px;
+    margin-top: 64px;
+}
+
+.spacer { /* leerer Platzhalter für ein Grid Element */
+    width: auto;
+}
+
+.mainstat {
+    text-align: -webkit-center;
+}
+
+.playericon {
+    order: 2;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.rankedborder {
+    order: 2;
+    width: 175px;
+    height: 175px;
+    position: relative;
+    z-index: 1;
+    top: -165px;
+}
+
+.playerlevel {
+    order: 3;
+    font-size: 24px;
+    top: -165px;
+    position: relative;
+}
+
+.summonername {
+    order: 4;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.name {
+    font-size: 32px;
+}
+
+.summonerrank {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 24px;
+}
+
+.logo {
+    position: absolute;
+    left: calc(50% -240px);
+    top: 64px;
+}
+
+.stats{
+    font-family: verdana;
+    font-size: 64px;
+    color: #f5f5f5;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.button {
+    border-radius: 10px;
+    border-color: #2566e9;
+    margin-top: 16px;
+    position: relative;
+    left: 45%;
+    color: black;
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.matchhistory {
+    color: white;
+    position: relative;
+    margin-top: -160px;
+    border: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 435%;
+} 
+
+.td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+}
+  
+.th {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+}
+
+.tr:nth-child(even){
+    background-color: #e09028;
+}
+.tr:nth-child(odd){
+    background-color: #ffffff;
+    color: black;
+}
+  
+.tr:hover:nth-child(even) {
+    background-color: #ad670c;
+}
+.tr:hover:nth-child(odd) {
+    background-color: #b4b2b2;
+}
+  
+.th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #333;
+    color: white;
+    text-decoration: blink;
+}
