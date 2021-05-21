@@ -20,8 +20,11 @@ import java.sql.*;
 public class Main {
 
     public static void main(String[] args) {
-
-        String summonerName = args[0];
+        //Name des Spielers wird zusammengesetzt, damit der Name auch Leerzeichen enthalten darf
+        String summonerName = "";
+        for(String namePart : args){
+            summonerName = summonerName + " " + namePart;
+        }
 
         /* Scanner zum manuellen eingeben von Namen zum testen
        System.out.println("Gib einen Namen ein!");
@@ -129,7 +132,7 @@ public class Main {
     public static String getResponse(String url) {
 
         //Extra Property, was statisch gesetzt werden muss (weil der key nur manuell generiert und hier eingepflegt werden muss) um die API von Riot Games anfragen zu können.
-        String apiKey = "RGAPI-0a5b4ada-6788-4b0b-b935-727196770bff";
+        String apiKey = "RGAPI-5c7669b8-c384-4b76-ac96-3b925b0b1d49";
 
         //Senden der Abfrage an den gegebenen Link und Hinzufügen des API-Keys
         try {
