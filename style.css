@@ -57,7 +57,12 @@ body {
     .playerlevel {
         position: relative;
         top: -160px;
-        left: 55px;
+        left: 25px;
+        width: max-content;
+    }
+
+    .matchhistory{
+        left: -30px;
     }
 
     .button{
@@ -73,6 +78,10 @@ body {
     .stats {
         margin-top: 128px;
     }
+
+    .name{
+        font-size: 24px !important;
+    }
 }
 @media (min-width:850px){
     .summonerinput {
@@ -80,7 +89,12 @@ body {
     }
 
     .summonername {
-        font-size: 24px !important;
+        font-size: 36px !important;
+    }
+    .summonerrank {
+        text-align: center;
+        margin-top: 32px;
+        font-size: 24px;
     }
 }
 
@@ -175,8 +189,9 @@ body {
 
 .summonerrank {
     text-align: center;
-    margin-top: 32px;
+    margin-top: 16px;
     font-size: 24px;
+    margin-left: 16px;
 }
 
 .logo {
