@@ -1,3 +1,9 @@
+/*
+Author: Justin Kühl, Karsten Kaschte, Leon Helbig
+Datum: 20.05.2021
+Version: 1.0
+ */
+
 public class Match {
 
     private long gameId;
@@ -67,8 +73,4 @@ public class Match {
     public void setLane(String lane) {
         this.lane = lane;
     }
-
-
-
-
 }

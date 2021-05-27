@@ -1,15 +1,21 @@
+/*
+Author: Justin Kühl, Karsten Kaschte, Leon Helbig
+Datum: 20.05.2021
+Version: 1.0
+ */
+
 import java.util.List;
 
 public class Summoner {
-    public String name;
-    public String summonerId;
-    public String accountId;
-    public int profileIconId;
-    public String puuid;
-    public long summonerLevel;
-    public String rank;
-    public String tier;
-    public  List<Match> matchHistory;
+    private String name;
+    private String summonerId;
+    private String accountId;
+    private int profileIconId;
+    private String puuid;
+    private long summonerLevel;
+    private String rank;
+    private String tier;
+    private  List<Match> matchHistory;
 
     public Summoner(String name, String summonerId, String accountId, int profileIconId, String puuid, long summonerLevel, String rank, String tier, List<Match> matchHistory) {
         this.name = name;
@@ -22,6 +28,10 @@ public class Summoner {
         this.tier = tier;
         this.matchHistory = matchHistory;
     }
+
+    public List<Match> getMatchHistory(){ return matchHistory;}
+
+    public String getTier(){ return tier;}
 
     public String getRank() {
         return rank;
